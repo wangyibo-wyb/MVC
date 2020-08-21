@@ -2,9 +2,13 @@
 if (!defined("MVC")){
     die("非法侵入");
 }
-class index extends main{
+use libs\smarty;
+use libs\db;
+class index{
     function int(){
-        $this->smarty->display("admin/login.html");
+        $smarty=new smarty();
+        $smarty->display("admin/login.html");
+        //$this->smarty->display("admin/login.html");
     }
     function login(){
         $uname=addslashes($_POST["uname"]);
@@ -19,7 +23,9 @@ class index extends main{
 //            die("数据库连接错误");
 //        }
 //        $db->query("set names utf8");
-        $db=$this->db;
+        //$db=$this->db;
+        $database=new \libs\db();
+        $db=$database->db;
         $result=$db->query("select * from user where uname='{$uname}' and password='{$password}'");
         if($result->num_rows<1){
             echo "登陆失败";

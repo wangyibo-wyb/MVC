@@ -1,7 +1,11 @@
 <?php
-class reg extends main{
+use libs\smarty;
+use libs\db;
+class reg{
     function add(){
-        $this->smarty->display("admin/reg.html");
+        $smarty=new smarty();
+        $smarty->display("admin/reg.html");
+        //$this->smarty->display("admin/reg.html");
     }
     function addUser(){
         $uname=$_POST["uname"];
@@ -17,7 +21,9 @@ class reg extends main{
 //            die("数据库连接错误");
 //        }
 //        $db->query("set names utf8");
-        $db=$this->db;
+        //$db=$this->db;
+        $database=new \libs\db();
+        $db=$database->db;
         $result=$db->query("select uname from user where uname='{$uname}'");
         if($result->num_rows>0){
             echo "用户名已存在";
@@ -36,7 +42,9 @@ class reg extends main{
 //            die("数据库连接错误");
 //        }
 //        $db->query("set names utf8");
-        $db=$this->db;
+        //$db=$this->db;
+        $database=new \libs\db();
+        $db=$database->db;
         $result=$db->query("select uname from user where uname='{$uname}'");
         if($result->num_rows<1){
             echo "true";
