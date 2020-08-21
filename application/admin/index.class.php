@@ -4,7 +4,7 @@ if (!defined("MVC")){
 }
 class index extends main{
     function int(){
-        $this->smarty->dispaly("admin/login.html");
+        $this->smarty->display("admin/login.html");
     }
     function login(){
         $uname=addslashes($_POST["uname"]);
@@ -24,7 +24,7 @@ class index extends main{
         if($result->num_rows<1){
             echo "登陆失败";
         }else{
-            header("{ENTRY_ADD}/admin/index/first");
+            header("location:/2006/MVC/index.php/admin/index/first");
         }
     }
     function first(){

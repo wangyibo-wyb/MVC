@@ -10,6 +10,6 @@ return array(
     "smarty"=>array(
         "templateDir"=>TPL_PATH,
         "compileDir"=>COMPILE_PATH,
-        "cacheDir"=>CACHE_PAT
+        "cacheDir"=>CACHE_PATH
     )
 );

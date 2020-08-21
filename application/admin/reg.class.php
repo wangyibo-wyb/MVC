@@ -26,7 +26,7 @@ class reg extends main{
         $password=md5(md5($password));
         $db->query("insert into user (uname,password) VALUES ('$uname','$password')");
         if($db->affected_rows>0){
-            echo "插入成功";
+            echo "注册成功";
         }
     }
     function checkName(){
