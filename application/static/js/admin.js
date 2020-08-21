@@ -1,0 +1,22 @@
+$(function (){
+    $(".form-horizontal").validate({
+        rules:{
+            uname:{
+                required:true,
+                minlength:5
+            },
+            password:{
+                required:true
+            }
+        },
+        messages:{
+            uname:{
+                required:"用户名必须填写",
+                minlength:"要符合用户名规则"
+            },
+            password:{
+                required:"密码必须填写"
+            }
+        }
+    })
+})

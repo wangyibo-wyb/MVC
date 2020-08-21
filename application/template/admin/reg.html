@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
+    <link rel="stylesheet" href="{CSS_ADD}admin/login.css">
+    <script src="{JS_ADD}jQuery.js"></script>
+    <script src="{JS_ADD}jquery-validate.js"></script>
+    <script src="{JS_ADD}reg.js"></script>
+</head>
+<body>
+<form class="form-horizontal" action="{ENTRY_ADD}/admin/reg/addUser" method="post">
+    <h1>欢迎来到xx后台管理中心</h1>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="请输入用户名" name="uname">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">密码</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password1" class="col-sm-2 control-label">再次输入密码</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password1" placeholder="请再次输入密码" name="password1">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">注册</button>
+            &nbsp;&nbsp;已有账号？请
+            <a href="{ENTRY_ADD}/admin/index/int" class="btn btn-default">登录</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
