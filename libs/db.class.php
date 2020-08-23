@@ -16,4 +16,7 @@ class db{
         $db->query("set names utf8");
         $this->db=$db;
     }
+    function close(){
+        mysqli_close($this->db);
+    }
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("content-type:text/html;charset=utf8");
 //用来记录一个口令
 define("MVC",true);

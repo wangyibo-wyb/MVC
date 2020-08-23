@@ -11,5 +11,6 @@ return array(
         "templateDir"=>TPL_PATH,
         "compileDir"=>COMPILE_PATH,
         "cacheDir"=>CACHE_PATH
-    )
+    ),
+
 );

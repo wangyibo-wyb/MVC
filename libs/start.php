@@ -24,6 +24,9 @@ define("COMPILE_PATH",APP_NAME."compile".DIRECTORY_SEPARATOR);
 define("CACHE_PATH",APP_NAME."cache".DIRECTORY_SEPARATOR);
 //定义smarty路径
 define("SMARTY_PATH",LIBS_PATH."smarty".DIRECTORY_SEPARATOR);
+//定义字体路径
+define("FONT_PATH",APP_NAME."static/font/");
+
 
 //定义通过HTTP协议访问的地址
 define("HOST_ADD","http://".$_SERVER["HTTP_HOST"]);
