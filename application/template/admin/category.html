@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
+    <link rel="stylesheet" href="{CSS_ADD}admin/category.css">
+</head>
+<body>
+<div class="container">
+    {if $data}
+    <table class="table table-bordered">
+        {$data}
+    </table>
+    {else}
+    <table class="table table-bordered">
+        <tr>
+            <td>暂无栏目！</td>
+        </tr>
+    </table>
+    {/if}
+</div>
+<div class="pannel addpannel">
+    <div class="close">X</div>
+    <form action="{ENTRY_ADD}/admin/category/add" method="post">
+        <input type="text" name="cname">
+        <input type="hidden" name="cid">
+        <select name="isshow">
+            <option value="1">在导航可见</option>
+            <option value="0">在导航不可见</option>
+        </select>
+        <input type="text" name="tpl_name" placeholder="请输入对应的模板">
+        <br>栏目描述：<textarea name="info" cols="30" rows="5" style="margin-top: 10px"></textarea>
+        <input type="submit" value="提交">
+    </form>
+</div>
+<div class="pannel editpannel">
+    <div class="close">X</div>
+    <form action="{ENTRY_ADD}/admin/category/add" method="post">
+        <input type="text" name="cname">
+        <select name="pid" id="opts">
+
+        </select>
+        <select name="isshow" id="isshow">
+            <option value="1">在导航可见</option>
+            <option value="0">在导航不可见</option>
+        </select>
+        <input type="text" name="tpl_name" placeholder="请输入对应的模板">
+        <br>栏目描述：<textarea name="info" cols="30" rows="5" style="margin-top: 10px"></textarea>
+        <input type="button" value="修改">
+    </form>
+</div>
+<script src="{JS_ADD}jQuery.js"></script>
+<script src="{JS_ADD}category.js"></script>
+</body>
+</html>

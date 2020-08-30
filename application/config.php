@@ -12,5 +12,19 @@ return array(
         "compileDir"=>COMPILE_PATH,
         "cacheDir"=>CACHE_PATH
     ),
+    "code"=>array(
+        "type"=>"png",
+        "width"=>160,
+        "height"=>50,
+        "codeLen"=>4,
+        "seed"=>"abcdefhjkmnprstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ345678",
+        "fontSize"=>array("min"=>20,"max"=>35),
+        "fontAngle"=>array("min"=>-15,"max"=>15),
+        "lineNum"=>array("min"=>2,"max"=>4),
+        "lineWidth"=>array("min"=>1,"max"=>2),
+        "pixNum"=>array("min"=>50,"max"=>100),
+        "fontFile"=>"D:\WampServer\www/2006\MVC\application\static/font/demo.TTF",
+        "ischeck"=>false
+    )
 
 );

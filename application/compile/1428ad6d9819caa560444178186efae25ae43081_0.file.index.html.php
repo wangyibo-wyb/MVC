@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-23 11:56:12
+/* Smarty version 3.1.34-dev-7, created on 2020-08-29 08:28:18
   from 'D:\WampServer\www\2006\MVC\application\template\admin\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f42595c558715_42356860',
+  'unifunc' => 'content_5f4a11a2585c78_78138582',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1428ad6d9819caa560444178186efae25ae43081' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\admin\\index.html',
-      1 => 1598183769,
+      1 => 1598689696,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f42595c558715_42356860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4a11a2585c78_78138582 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -115,13 +115,10 @@ function content_5f42595c558715_42356860 (Smarty_Internal_Template $_smarty_tpl)
                 <div>用户管理</div>
                 <ul class="son">
                     <li>
-                        <a href="/2006/MVC/application/template/admin/adduser.html" target="main">添加用户</a>
+                        <a href="" target="main">查看用户</a>
                     </li>
                     <li>
-                        <a href="/2006/MVC/application/template/admin/edituser.html" target="main">修改用户</a>
-                    </li>
-                    <li>
-                        <a href="/2006/MVC/application/template/admin/deleteuser.html" target="main">删除用户</a>
+                        <a href="" target="main">修改用户</a>
                     </li>
                 </ul>
             </li>
@@ -129,13 +126,10 @@ function content_5f42595c558715_42356860 (Smarty_Internal_Template $_smarty_tpl)
                 <div>栏目管理</div>
                 <ul class="son">
                     <li>
-                        <a href="" >添加栏目</a>
+                        <a href="/2006/MVC/index.php/admin/category/addpage" target="main">添加栏目</a>
                     </li>
                     <li>
-                        <a href="" >修改栏目</a>
-                    </li>
-                    <li>
-                        <a href="" >删除栏目</a>
+                        <a href="/2006/MVC/index.php/admin/category" target="main">查看栏目</a>
                     </li>
                 </ul>
             </li>
@@ -143,13 +137,10 @@ function content_5f42595c558715_42356860 (Smarty_Internal_Template $_smarty_tpl)
                 <div>内容管理</div>
                 <ul class="son">
                     <li>
-                        <a href="" >添加内容</a>
+                        <a href="/2006/MVC/index.php/admin/content/add" target="main">添加内容</a>
                     </li>
                     <li>
-                        <a href="" >修改内容</a>
-                    </li>
-                    <li>
-                        <a href="" >删除内容</a>
+                        <a href="/2006/MVC/index.php/admin/content/showList" target="main">查看内容</a>
                     </li>
                 </ul>
             </li>

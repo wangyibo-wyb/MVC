@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-23 11:01:53
+/* Smarty version 3.1.34-dev-7, created on 2020-08-24 08:14:19
   from 'D:\WampServer\www\2006\MVC\application\template\admin\login.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f424ca12b45d1_03017776',
+  'unifunc' => 'content_5f4376db5a9006_95794661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de1eaaf19b99f481c538fa5b8be45d6a23f85d9b' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\admin\\login.html',
-      1 => 1598066376,
+      1 => 1598256858,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f424ca12b45d1_03017776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4376db5a9006_95794661 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>

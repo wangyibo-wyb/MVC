@@ -12,11 +12,14 @@ class index{
         //$this->smarty->display("admin/login.html");
     }
     function login(){
+        global $config;
         $uname=addslashes($_POST["uname"]);
         $password=md5(md5($_POST["password"]));
-        if($_POST["code"]!==$_SESSION["code"]){
-            echo "验证码有误";
-            return;
+        if($config["code"]["ischeck"]) {
+            if ($_POST["code"] !== $_SESSION["code"]) {
+                echo "验证码有误";
+                return;
+            }
         }
         if(strlen($uname)<5||empty($password)){
             echo "用户名或密码不符合规范";

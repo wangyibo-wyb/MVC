@@ -1,0 +1,18 @@
+.table{
+    font-size: 17px;
+    margin-top: 20px;
+}
+.add1{
+    margin-top: 20px;
+}
+.pannel{
+    width: 40%;
+    height: 30%;
+    background: #fff;
+    box-shadow: 0 0 4px #000;
+    position: absolute;
+    left: 0;right: 0;top: 20%;
+    margin: auto;
+    z-index: 1;
+    display: none;
+}

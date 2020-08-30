@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="header-row">
+        <div class="header-left">
+            <a class="header-logo">
+                <img src="{IMG_ADD}logo.jpg" alt="" style="width: 82px;height: 40px;">
+            </a>
+            <span class="header-text">规范中小企业网站标准！</span>
+        </div>
+        <div class="header-right">
+            <ul class="header-list">
+                <li class="header-list-item1" style="border-bottom: 1px solid #5974a3;">
+                    <a href="/2006/MVC/index.php/index/index">首页</a>
+                </li>
+                {foreach $menuData as $v}
+                <li class="header-list-item2">
+                    <a href="/2006/MVC/index.php/index/category?cid={$v['cid']}">{$v["cname"]}</a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>

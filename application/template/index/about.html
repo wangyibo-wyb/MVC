@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们(仅供练习)</title>
+    <link rel="stylesheet" href="{CSS_ADD}index/about.css">
+</head>
+<body>
+<!-- 顶部导航开始 -->
+<div class="header-start">
+    {include file=$header}
+</div>
+<!-- 消息通知栏 -->
+<div class="notice">
+    <marquee onmouseover="this.stop();" onmouseout="this.start();" style="margin: 0 15px;">
+        创建企业网站并不是你想像的那样困难，来企业门户网注册账号并登录、编辑几段文字、上传几张产品图片，瞬间完成，你也可以像其他人一样拥有自己的企业网站。</marquee>
+</div>
+<!-- 标题栏开始 -->
+<div class="title">
+    <div class="title-con">
+        <span>文章页</span>
+    </div>
+</div>
+<!-- 主体内容开始 -->
+<div class="container">
+    <div class="con-left">
+        {foreach $condata as $v1}
+        <div class="con-left-title">{$v1["ctitle"]}</div>
+        <div class="con-left-subtitle">
+                <span>
+                    <label>发表于2016-06-28 06:47:37，被浏览1362次</label>
+                </span>
+        </div>
+        <div class="con-left-con">
+            <p>{$v1["content"]}</p>
+        </div>
+        {/foreach}
+    </div>
+    <div class="con-right">
+        <div class="con-right-title">导航列表</div>
+        <ul class="con-right-list">
+            <li>
+                <a href="index.html" class="con-right-item">首页</a>
+            </li>
+            <li>
+                <a href="news.html" class="con-right-item">最近新闻</a>
+            </li>
+            <li>
+                <a href="experience.html" class="con-right-item">经验之谈</a>
+            </li>
+            <li>
+                <a href="about.html" class="con-right-item" style="font-weight: 700;">关于我们</a>
+            </li>
+            <li>
+                <a href="" class="con-right-item" style="border-bottom: none;">业界新闻</a>
+            </li>
+        </ul>
+        <div class="con-right-tab">
+            <ul class="tab-title">
+                <li>
+                    <a href="javascript:;">
+                        <img src="{IMG_ADD}remen.png" alt="">
+                        热门文章
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" style="border-top:3px solid #EEE;background-color: #EEE;">
+                        <img src="{IMG_ADD}zuixin.png" alt="">
+                        最新文章
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-con">
+                <div class="tab-con1">
+                    <ul>
+                        <li>
+                            <div class="post-info">
+                                <a href="">关于企业门户网</a>
+                                <div class="post-date">2016-06-28</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-img">
+                                <img src="{IMG_ADD}j3.png" alt="" style="float: left;width: 50px;height: 50px;;">
+                            </div>
+                            <div class="post-info">
+                                <a href="">秀米：一款支持图文排版和H5秀的工具</a>
+                                <div class="post-date">2018-04-22</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-info">
+                                <a href="">如何提高企业的品牌知名度</a>
+                                <div class="post-date">2016-06-28</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-info">
+                                <a href="">如何免费、快速地建立自己的网站呢？</a>
+                                <div class="post-date">2016-07-09</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-img">
+                                <img src="{IMG_ADD}z2.png" alt="" style="float: left;width: 50px;height: 50px;;">
+                            </div>
+                            <div class="post-info">
+                                <a href="">什么是banner</a>
+                                <div class="post-date">2018-06-03</div>
+                                <br>
+                            </div>
+                        </li>
+                        <li style="border-bottom: none;">
+                            <div class="post-info">
+                                <a href="">企业门户网助力中小企业快速建立网络品牌</a>
+                                <div class="post-date">2016-06-28</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-con1" style="display: none;">
+                    <ul>
+                        <li>
+                            <div class="post-img">
+                                <img src="{IMG_ADD}j1.png" alt="" style="float: left;width: 50px;height: 50px;;">
+                            </div>
+                            <div class="post-info">
+                                <a href="">如何给企业门户网申请企业备案？</a>
+                                <div class="post-date">2020-04-11</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-img">
+                                <img src="{IMG_ADD}j2.png" alt="" style="float: left;width: 50px;height: 50px;;">
+                            </div>
+                            <div class="post-info">
+                                <a href="">如何定制网站模板</a>
+                                <div class="post-date">2020-03-11</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-info">
+                                <a href="">在企业门户网如何选择自己想要的模板</a>
+                                <div class="post-date">2016-06-28</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-info">
+                                <a href="">在企业门户网建设网站后，如何拥有一个顶级域名</a>
+                                <div class="post-date">2020-03-05</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-info">
+                                <a href="">会员补贴，共克时艰 | 中小企业Q1会员专项补贴</a>
+                                <div class="post-date">2020-02-15</div>
+                                <br>
+                            </div>
+                        </li>
+                        <li style="border-bottom: none;">
+                            <div class="post-info">
+                                <a href="">关于近期接收到"阿里云违规URL屏蔽访问处理通知"处理通知</a>
+                                <div class="post-date">2019-06-04</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tabTitle = document.querySelectorAll(".tab-title a");
+            var tabCon = document.querySelectorAll(".tab-con1");
+            for (let i=0;i<tabTitle.length;i++){
+                tabTitle[i].onclick = function(){
+                    for(var j=0;j<tabCon.length;j++){
+                        tabCon[j].style.display = "none";
+                        tabTitle[j].style.background = "#eee";
+                        tabTitle[j].style.borderTopColor = "#eee"
+                    }
+                    tabCon[i].style.display = "block";
+                    tabTitle[i].style.background = "#fff";
+                    tabTitle[i].style.borderTopColor = "#0088cc"
+                }
+                tabTitle[i].onmouseover = function(){
+                    tabTitle[i].style.borderTopColor = "#0088cc";
+                    tabTitle[i].style.cursor = "pointer";
+                }
+                tabTitle[i].onmouseout = function(){
+                    tabTitle[i].style.borderTopColor = "#eee";
+                    tabTitle[i].style.cursor = "pointer";
+                }
+            }
+        </script>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<!-- 底部开始 -->
+{include file=$footer}
+<script src="{JS_ADD}animate.js"></script>
+<script>
+    var header = document.querySelector(".header");
+    var toTop = document.querySelector(".top");
+    window.onscroll = function () {
+        var st = document.documentElement.scrollTop;
+        if(st>5){
+            header.style.background = "#000";
+            header.style.opacity = 0.8;
+        }else{
+            header.style.background = "none";
+            header.style.opacity = 1;
+        }
+        if(st>241){
+            toTop.style.display = "block";
+        }else{
+            toTop.style.display = "none";
+        }
+    }
+    toTop.onclick = function () {
+        animate(document.documentElement, {
+            scrollTop: 0
+        }, 500)
+    }
+</script>
+</body>
+</html>
