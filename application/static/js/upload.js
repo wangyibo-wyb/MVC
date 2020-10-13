@@ -255,7 +255,7 @@ class upload{
      if(this.multiple) {
          file.multiple = "multiple";
      }
-     file.style.cssText="opacity:0;position:absolute;z-index:1;height:100%;width:100%;left:0;top:0;";
+     file.style.cssText="opacity:0;position:absolute;z-index.js:1;height:100%;width:100%;left:0;top:0;";
 
      selectBox.appendChild(file);
      parent.appendChild(selectBox);

@@ -783,7 +783,7 @@ class Smarty extends Smarty_Internal_TemplateBase
             }
         } else {
             if ($key !== null) {
-                // override directory at specified index
+                // override directory at specified index.js
                 $dir[ $key ] = $template_dir;
                 unset($processed[ $key ]);
             } else {
@@ -797,10 +797,10 @@ class Smarty extends Smarty_Internal_TemplateBase
     /**
      * Get template directories
      *
-     * @param mixed $index    index of directory to get, null to get all
+     * @param mixed $index    index.js of directory to get, null to get all
      * @param bool  $isConfig true for config_dir
      *
-     * @return array list of template directories, or directory of $index
+     * @return array list of template directories, or directory of $index.js
      */
     public function getTemplateDir($index = null, $isConfig = false)
     {
@@ -855,7 +855,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     /**
      * Get config directory
      *
-     * @param mixed $index index of directory to get, null to get all
+     * @param mixed $index index.js of directory to get, null to get all
      *
      * @return array configuration directory
      */

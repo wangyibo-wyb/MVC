@@ -26,16 +26,18 @@ class code{
         $this->pixNum=$config["code"]["pixNum"]?$config["code"]["pixNum"]:array("min"=>50,"max"=>100);
         $this->fontFile=$config["code"]["fontFile"]?$config["code"]["fontFile"]:"D:\WampServer\www/2006\MVC\application\static/font/demo.TTF";
     }
+    //创建画布
     private function createCanvas(){
         $this->image=imagecreatetruecolor($this->width,$this->height);
         imagefill($this->image,0,0,$this->setColor());
     }
     private function setColor($type="background"){
-        $r=$type=="background"?mt_rand(20,140):mt_rand(150,200);
-        $g=$type=="background"?mt_rand(20,140):mt_rand(150,200);
-        $b=$type=="background"?mt_rand(20,140):mt_rand(150,200);
+        $r=$type=="background"?mt_rand(20,125):mt_rand(170,255);
+        $g=$type=="background"?mt_rand(20,125):mt_rand(170,255);
+        $b=$type=="background"?mt_rand(20,125):mt_rand(170,255);
         return imagecolorallocate($this->image,$r,$g,$b);
     }
+
     private function getText(){
         $str="";
         for($i=0;$i<$this->codeLen;$i++){
@@ -43,6 +45,7 @@ class code{
         }
         return $str;
     }
+    //写文字
     private function setText(){
         $str=$this->getText();
         $this->str=strtolower($str);
@@ -51,9 +54,10 @@ class code{
             $angle=mt_rand($this->fontAngle["min"],$this->fontAngle["max"]);
             $space=$this->width/($this->codeLen*2+1);
             $box=imagettfbbox($size,$angle,"D:\WampServer\www/2006\MVC\application\static/font/demo.TTF",$str[$i]);
-            imagettftext($this->image,$size,$angle,mt_rand(max($space*($i*2-1)+5,0),$space*($i*2+1)-5),($box[0]-$box[7])+mt_rand(0,$this->height-($box[0]-$box[7])),$this->setColor(),"D:\WampServer\www/2006\MVC\application\static/font/demo.TTF",$str[$i]);
+            imagettftext($this->image,$size,$angle,mt_rand(max($space*($i*2-1)+5,0),$space*($i*2+1)-5),($box[0]-$box[7])+mt_rand(0,$this->height-($box[0]-$box[7])),$this->setColor("a"),"D:\WampServer\www/2006\MVC\application\static/font/demo.TTF",$str[$i]);
         }
     }
+    //画线
     private function setLine(){
         $num=mt_rand($this->lineNum["min"],$this->lineNum["max"]);
         for($i=0;$i<$num;$i++) {
@@ -65,12 +69,14 @@ class code{
             imageline($this->image, $x1, $y1, $x2, $y2,$this->setColor());
         }
     }
+    //画像素点
     private function setPix(){
         $num=mt_rand($this->pixNum["min"],$this->pixNum["max"]);
         for($i=0;$i<$num;$i++){
             imagesetpixel($this->image,mt_rand(0,$this->width),mt_rand(0,$this->height),$this->setColor("a"));
         }
     }
+    //输出
     function out(){
         header("content-type:image/".$this->type);
         //创建画布

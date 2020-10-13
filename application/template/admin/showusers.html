@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
+    <script src="{JS_ADD}jQuery.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-bordered" style="margin-top: 20px">
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>操作</th>
+        </tr>
+        {foreach $condata as $v}
+        <tr>
+            <td>
+                {$v["id"]}
+            </td>
+            <td>
+                {$v["uname"]}
+            </td>
+            <td>
+                {$v["password"]}
+            </td>
+            <td>
+                <a href="/2006/MVC/index.php/admin/user/delete?id={$v['id']}">删除</a>
+            </td>
+        </tr>
+        {/foreach}
+    </table>
+</div>
+</body>
+</html>

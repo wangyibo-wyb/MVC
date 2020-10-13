@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-30 15:48:01
+/* Smarty version 3.1.34-dev-7, created on 2020-09-11 09:58:05
   from 'D:\WampServer\www\2006\MVC\application\template\index\message.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4bca31e07b55_53219330',
+  'unifunc' => 'content_5f5b4a2d0b8b73_29698763',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4bca31e07b55_53219330 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5b4a2d0b8b73_29698763 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

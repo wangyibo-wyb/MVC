@@ -60,7 +60,7 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
      * @var array
      */
     public $nameProperties = array(
-        'first', 'last', 'index', 'iteration', 'show', 'total', 'rownum', 'index_prev',
+        'first', 'last', 'index.js', 'iteration', 'show', 'total', 'rownum', 'index_prev',
         'index_next', 'loop'
     );
 
@@ -111,10 +111,10 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
         $incFor = array();
         $cmpFor = array();
         $propValue = array(
-            'index'     => "{$sectionVar}->value['index']", 'show' => 'true', 'step' => 1,
+            'index.js'     => "{$sectionVar}->value['index.js']", 'show' => 'true', 'step' => 1,
             'iteration' => "{$local}iteration",
         );
-        $propType = array('index' => 2, 'iteration' => 2, 'show' => 0, 'step' => 0,);
+        $propType = array('index.js' => 2, 'iteration' => 2, 'show' => 0, 'step' => 0,);
         // search for used tag attributes
         $this->scanForProperties($attributes, $compiler);
         if (!empty($this->matchResults[ 'named' ])) {
@@ -129,7 +129,7 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
                 }
             }
         }
-        $namedAttr[ 'index' ] = true;
+        $namedAttr[ 'index.js' ] = true;
         $output = "<?php\n";
         foreach ($_attr as $attr_name => $attr_value) {
             switch ($attr_name) {
@@ -193,14 +193,14 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
         $initFor[ 'iteration' ] = "{$propValue['iteration']} = 1";
         if ($propType[ 'step' ] === 0) {
             if ($propValue[ 'step' ] === 1) {
-                $incFor[ 'index' ] = "{$sectionVar}->value['index']++";
+                $incFor[ 'index.js' ] = "{$sectionVar}->value['index.js']++";
             } elseif ($propValue[ 'step' ] > 1) {
-                $incFor[ 'index' ] = "{$sectionVar}->value['index'] += {$propValue['step']}";
+                $incFor[ 'index.js' ] = "{$sectionVar}->value['index.js'] += {$propValue['step']}";
             } else {
-                $incFor[ 'index' ] = "{$sectionVar}->value['index'] -= " . -$propValue[ 'step' ];
+                $incFor[ 'index.js' ] = "{$sectionVar}->value['index.js'] -= " . -$propValue[ 'step' ];
             }
         } else {
-            $incFor[ 'index' ] = "{$sectionVar}->value['index'] += {$propValue['step']}";
+            $incFor[ 'index.js' ] = "{$sectionVar}->value['index.js'] += {$propValue['step']}";
         }
         if (!isset($propValue[ 'max' ])) {
             $propValue[ 'max' ] = $propValue[ 'loop' ];
@@ -290,7 +290,7 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
             $initLocal[ 'start' ] = $propValue[ 'start' ];
             $propValue[ 'start' ] = "{$local}start";
         }
-        $initFor[ 'index' ] = "{$sectionVar}->value['index'] = {$propValue['start']}";
+        $initFor[ 'index.js' ] = "{$sectionVar}->value['index.js'] = {$propValue['start']}";
         if (!isset($_attr[ 'start' ]) && !isset($_attr[ 'step' ]) && !isset($_attr[ 'max' ])) {
             $propValue[ 'total' ] = $propValue[ 'loop' ];
             $propType[ 'total' ] = $propType[ 'loop' ];
@@ -383,10 +383,10 @@ class Smarty_Internal_Compile_Section extends Smarty_Internal_Compile_Private_Fo
             $output .= "{$sectionVar}->value['rownum'] = {$propValue['iteration']};\n";
         }
         if (isset($namedAttr[ 'index_prev' ])) {
-            $output .= "{$sectionVar}->value['index_prev'] = {$propValue['index']} - {$propValue['step']};\n";
+            $output .= "{$sectionVar}->value['index_prev'] = {$propValue['index.js']} - {$propValue['step']};\n";
         }
         if (isset($namedAttr[ 'index_next' ])) {
-            $output .= "{$sectionVar}->value['index_next'] = {$propValue['index']} + {$propValue['step']};\n";
+            $output .= "{$sectionVar}->value['index_next'] = {$propValue['index.js']} + {$propValue['step']};\n";
         }
         if (isset($namedAttr[ 'first' ])) {
             $output .= "{$sectionVar}->value['first'] = ({$propValue['iteration']} === 1);\n";

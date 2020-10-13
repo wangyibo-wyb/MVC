@@ -6,22 +6,36 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
 </head>
 <body>
-<div class="container">
-<form action="{ENTRY_ADD}/admin/category/add" method="post" class="add1">
-    <input type="text" placeholder="添加一级栏目" name="cname"><br><br>
-    <select name="isshow">
-        <option value="1">在导航可见</option>
-        <option value="0">在导航不可见</option>
-    </select>
-    <br><br>
-    <input type="text" name="tpl_name" placeholder="请输入对应的模板">
-    <br><br>栏目描述：
-    <textarea name="info" cols="30" rows="10"></textarea>
-    <br><br>
-    <input type="submit" value="添加">
-</form>
+<div class="container" style="width: 1000px;padding-top: 50px">
+    <form action="{ENTRY_ADD}/admin/category/add" method="post" class="add1" class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">添加一级栏目：</label>
+            <input type="text" placeholder="添加一级栏目" class="form-control" name="cname" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">是否在导航可见：</label>
+            <select name="isshow" class="form-control">
+                <option value="1">在导航可见</option>
+                <option value="0">在导航不可见</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">模板名称：</label>
+            <input type="text" name="tpl_name" class="form-control" placeholder="请输入对应的模板">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">栏目描述：</label>
+            <textarea name="info" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="submit" value="添加" class="btn btn-info" style="float: right">
+        </div>
+    </form>
 </div>
 </body>
 </html>

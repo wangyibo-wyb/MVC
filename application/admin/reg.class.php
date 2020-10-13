@@ -32,7 +32,9 @@ class reg{
         $password=md5(md5($password));
         $db->query("insert into user (uname,password) VALUES ('$uname','$password')");
         if($db->affected_rows>0){
-            echo "注册成功";
+            echo "<script>alert('注册成功');location.href='/2006/MVC/index.php/admin'</script>";
+        }else{
+            echo "<script>alert('注册失败');location.href='/2006/MVC/index.php/admin/reg/add'</script>";
         }
     }
     function checkName(){

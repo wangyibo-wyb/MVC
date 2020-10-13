@@ -94,8 +94,8 @@ class Smarty_Internal_Runtime_Foreach
             if (isset($properties[ 'iteration' ])) {
                 $namedProp[ 'iteration' ] = 0;
             }
-            if (isset($properties[ 'index' ])) {
-                $namedProp[ 'index' ] = -1;
+            if (isset($properties[ 'index.js' ])) {
+                $namedProp[ 'index.js' ] = -1;
             }
             if (isset($properties[ 'show' ])) {
                 $namedProp[ 'show' ] = ($total > 0);

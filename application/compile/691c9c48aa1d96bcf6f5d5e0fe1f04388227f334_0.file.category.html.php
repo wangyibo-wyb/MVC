@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-29 09:06:02
+/* Smarty version 3.1.34-dev-7, created on 2020-09-11 12:22:03
   from 'D:\WampServer\www\2006\MVC\application\template\admin\category.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4a1a7a6f7345_52029341',
+  'unifunc' => 'content_5f5b6bebec4ac2_78806944',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '691c9c48aa1d96bcf6f5d5e0fe1f04388227f334' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\admin\\category.html',
-      1 => 1598691960,
+      1 => 1599826921,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4a1a7a6f7345_52029341 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5b6bebec4ac2_78806944 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -52,33 +52,61 @@ admin/category.css">
 <div class="pannel addpannel">
     <div class="close">X</div>
     <form action="<?php echo ENTRY_ADD;?>
-/admin/category/add" method="post">
-        <input type="text" name="cname">
+/admin/category/add" method="post" class="form-horizontal" style="margin: 10px 30px">
+        <div class="form-group">
+            <label class=" control-label">栏目名称：</label>
+        <input type="text" name="cname" class="form-control" placeholder="请输入栏目名称">
+        </div>
         <input type="hidden" name="cid">
-        <select name="isshow">
+        <div class="form-group">
+            <label class=" control-label">是否在导航可见：</label>
+        <select name="isshow" class="form-control">
             <option value="1">在导航可见</option>
             <option value="0">在导航不可见</option>
         </select>
-        <input type="text" name="tpl_name" placeholder="请输入对应的模板">
-        <br>栏目描述：<textarea name="info" cols="30" rows="5" style="margin-top: 10px"></textarea>
-        <input type="submit" value="提交">
+        </div>
+        <div class="form-group">
+            <label class=" control-label">模板名称：</label>
+        <input type="text" name="tpl_name" placeholder="请输入对应的模板" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class=" control-label">栏目描述：</label>
+        <textarea name="info" cols="30" rows="5" style="margin-top: 10px" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+        <input type="submit" value="提交" class="btn btn-info" style="float: right">
+        </div>
     </form>
 </div>
 <div class="pannel editpannel">
     <div class="close">X</div>
     <form action="<?php echo ENTRY_ADD;?>
-/admin/category/add" method="post">
-        <input type="text" name="cname">
-        <select name="pid" id="opts">
+/admin/category/add" method="post" style="margin: 10px 30px" class="form-horizontal">
+        <div class="form-group">
+            <label class=" control-label">栏目名称：</label>
+        <input type="text" name="cname" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class=" control-label">所属栏目：</label>
+        <select name="pid" id="opts" class="form-control">
 
         </select>
-        <select name="isshow" id="isshow">
+        </div>
+        <div class="form-group">
+            <label class=" control-label">是否在导航可见：</label>
+        <select name="isshow" id="isshow" class="form-control">
             <option value="1">在导航可见</option>
             <option value="0">在导航不可见</option>
         </select>
-        <input type="text" name="tpl_name" placeholder="请输入对应的模板">
-        <br>栏目描述：<textarea name="info" cols="30" rows="5" style="margin-top: 10px"></textarea>
-        <input type="button" value="修改">
+        </div>
+        <div class="form-group">
+            <label class=" control-label">模板名称：</label>
+        <input type="text" name="tpl_name" placeholder="请输入对应的模板" class="form-control">
+        </div>
+        <label class=" control-label">栏目描述：</label>
+        <textarea name="info" cols="30" rows="5" class="form-control"></textarea>
+        <br>
+        <input type="button" value="修改" class="btn btn-info" style="float: right">
     </form>
 </div>
 <?php echo '<script'; ?>

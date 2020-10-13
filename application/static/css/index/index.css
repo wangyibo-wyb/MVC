@@ -94,6 +94,15 @@ ul,p{
     display: block;
     position: absolute;
 }
+.progress{
+    position: absolute;
+    top: 0;
+    width: 0px;
+    height: 5px;
+    background: #5974A3;
+    z-index: 10000;
+    transition: all 7s  ease;
+}
 .back{
     top: 380px;
     transform: matrix(1, 0, 0, 1, 30, -20);

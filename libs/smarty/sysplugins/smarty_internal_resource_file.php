@@ -126,7 +126,7 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
             $file = str_replace(DIRECTORY_SEPARATOR === '/' ? '\\' : '/', DIRECTORY_SEPARATOR, $file);
         }
         $_directories = $source->smarty->getTemplateDir(null, $source->isConfig);
-        // template_dir index?
+        // template_dir index.js?
         if ($file[ 0 ] === '[' && preg_match('#^\[([^\]]+)\](.+)$#', $file, $fileMatch)) {
             $file = $fileMatch[ 2 ];
             $_indices = explode(',', $fileMatch[ 1 ]);
@@ -137,12 +137,12 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
                 if (isset($_directories[ $index ])) {
                     $_index_dirs[] = $_directories[ $index ];
                 } elseif (is_numeric($index)) {
-                    // try numeric index
+                    // try numeric index.js
                     $index = (int)$index;
                     if (isset($_directories[ $index ])) {
                         $_index_dirs[] = $_directories[ $index ];
                     } else {
-                        // try at location index
+                        // try at location index.js
                         $keys = array_keys($_directories);
                         if (isset($_directories[ $keys[ $index ] ])) {
                             $_index_dirs[] = $_directories[ $keys[ $index ] ];
@@ -151,7 +151,7 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
                 }
             }
             if (empty($_index_dirs)) {
-                // index not found
+                // index.js not found
                 return false;
             } else {
                 $_directories = $_index_dirs;

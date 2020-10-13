@@ -17,12 +17,12 @@ class index{
         $password=md5(md5($_POST["password"]));
         if($config["code"]["ischeck"]) {
             if ($_POST["code"] !== $_SESSION["code"]) {
-                echo "验证码有误";
+                echo "<script>alert('验证码有误')</script>";
                 return;
             }
         }
         if(strlen($uname)<5||empty($password)){
-            echo "用户名或密码不符合规范";
+            echo "<script>alert('用户名或密码不符合规范')</script>";
             return;
         }
         //匹配用户名和密码
@@ -36,7 +36,8 @@ class index{
         $db=$database->db;
         $result=$db->query("select * from user where uname='{$uname}' and password='{$password}'");
         if($result->num_rows<1){
-            echo "登陆失败";
+            echo "<script>alert('登录失败')</script>";
+            return;
         }else{
             $_SESSION["login"]="yes";
             $_SESSION["uname"]=$uname;

@@ -11,19 +11,20 @@
 </head>
 <body>
 <div class="container" style="margin-top: 20px">
-    <form action="" class="form-inline">
+    <form action="" class="form-inline" method="get">
         <div class="form-group">
-        <lable>选择分类：</lable>
-            <select name="cid" id="cid" class="form-control"></select>
+        <lable for="cid">选择分类：</lable>
+            <select name="cid" id="cid" class="form-control" cid="{$cid}"></select>
         </div>
         <div class="form-group">
-            <lable>标题关键字：</lable>
-            <input type="text" class="form-control">
+            <lable for="ctitle">标题关键字：</lable>
+            <input type="text" class="form-control" id="ctitle" name="ctitle" value="{$ctitle}">
         </div>
+        <div class="form-group">
         <div class="checkbox">
-            <label>
-                正序<input type="checkbox">
-            </label>
+            <label for="order">倒序</label>
+            <input type="checkbox" id="order" name="order" value="desc" {if $order=="desc"} checked {/if}>
+        </div>
         </div>
         <input type="submit" value="查询">
     </form>
@@ -44,10 +45,12 @@
             <td>
                 <a href="/2006/MVC/index.php/admin/content/show?conid={$v['conid']}">查看</a>
                 <a href="/2006/MVC/index.php/admin/content/edit?conid={$v['conid']}">编辑</a>
+                <a href="/2006/MVC/index.php/admin/content/delete?conid={$v['conid']}">删除</a>
             </td>
         </tr>
         {/foreach}
     </table>
+    {$str}
 </div>
 <script src="{JS_ADD}addcon.js"></script>
 </body>

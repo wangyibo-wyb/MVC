@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
+</head>
+<body>
+<div class="container" style="width: 1000px;padding-top: 50px">
+    <form action="{ENTRY_ADD}/admin/user/add" method="post" class="add1" class="form-horizontal">
+        <div class="form-group">
+            <label>用户名：</label>
+            <input type="text" class="form-control" placeholder="请输入用户名" id="uname" name="uname" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>密码：</label>
+            <input type="password" class="form-control" placeholder="请输入密码" id="password" name="password">
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="submit" value="添加" class="btn btn-info" style="float: right">
+        </div>
+    </form>
+</div>
+</body>
+</html>

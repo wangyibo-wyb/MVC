@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-29 08:28:18
+/* Smarty version 3.1.34-dev-7, created on 2020-09-24 08:49:04
   from 'D:\WampServer\www\2006\MVC\application\template\admin\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4a11a2585c78_78138582',
+  'unifunc' => 'content_5f6c5d804cb0b9_62162951',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1428ad6d9819caa560444178186efae25ae43081' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\admin\\index.html',
-      1 => 1598689696,
+      1 => 1600937342,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4a11a2585c78_78138582 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f6c5d804cb0b9_62162951 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -32,6 +32,9 @@ function content_5f4a11a2585c78_78138582 (Smarty_Internal_Template $_smarty_tpl)
     <style>
         html,body{
             width: 100%;height: 100%;
+        }
+        body{
+            background-image: url("../../static/img/background.jpeg");
         }
         *{
             box-sizing: border-box;
@@ -48,7 +51,7 @@ function content_5f4a11a2585c78_78138582 (Smarty_Internal_Template $_smarty_tpl)
         }
         .header{
             width: 100%;height: 15%;
-            background: #5bc0de;
+            background-color: #D3DCE6;
         }
         .header h1{
             color: #fff;font-weight: 500;
@@ -99,8 +102,9 @@ function content_5f4a11a2585c78_78138582 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 <div class="header">
-    <h1>欢迎来到XX管理系统</h1>
+    <h1>欢迎来到企业门户网站管理系统</h1>
     <div class="logininfo">
+        <a href="/2006/MVC/index.php" target="_blank">转到前台</a>
         <span>用户：<?php echo $_smarty_tpl->tpl_vars['uname']->value;?>
 </span>
         <span>
@@ -115,10 +119,10 @@ function content_5f4a11a2585c78_78138582 (Smarty_Internal_Template $_smarty_tpl)
                 <div>用户管理</div>
                 <ul class="son">
                     <li>
-                        <a href="" target="main">查看用户</a>
+                        <a href="/2006/MVC/index.php/admin/user/addusers" target="main" >添加用户</a>
                     </li>
                     <li>
-                        <a href="" target="main">修改用户</a>
+                        <a href="/2006/MVC/index.php/admin/user/showusers" target="main">查看用户</a>
                     </li>
                 </ul>
             </li>

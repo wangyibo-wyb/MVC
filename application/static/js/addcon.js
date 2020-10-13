@@ -8,7 +8,7 @@ $.ajax({
         str="";
     }
 })
-var str="";
+var str="<option value='0'>请选择分类</option>";
 function str_repeat(str,num){
     var result="";
     for(var i=0;i<num;i++){

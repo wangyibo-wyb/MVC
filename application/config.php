@@ -24,7 +24,7 @@ return array(
         "lineWidth"=>array("min"=>1,"max"=>2),
         "pixNum"=>array("min"=>50,"max"=>100),
         "fontFile"=>"D:\WampServer\www/2006\MVC\application\static/font/demo.TTF",
-        "ischeck"=>false
+        "ischeck"=>true
     )
 
 );

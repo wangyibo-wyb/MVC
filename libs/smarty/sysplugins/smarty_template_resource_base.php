@@ -74,7 +74,7 @@ abstract class Smarty_Template_Resource_Base
 
     /**
      * Included sub templates
-     * - index name
+     * - index.js name
      * - value use count
      *
      * @var int[]

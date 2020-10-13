@@ -36,7 +36,7 @@ class Smarty_Internal_Runtime_Inheritance
     public $inheritanceLevel = 0;
 
     /**
-     * inheritance template index
+     * inheritance template index.js
      *
      * @var int
      */
@@ -135,7 +135,7 @@ class Smarty_Internal_Runtime_Inheritance
      * @param \Smarty_Internal_Template $tpl
      * @param                           $className
      * @param string                    $name
-     * @param int|null                  $tplIndex index of outer level {block} if nested
+     * @param int|null                  $tplIndex index.js of outer level {block} if nested
      *
      * @throws \SmartyException
      */

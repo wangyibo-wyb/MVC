@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-30 12:17:20
+/* Smarty version 3.1.34-dev-7, created on 2020-09-24 12:18:44
   from 'D:\WampServer\www\2006\MVC\application\template\admin\content.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4b98d0178ac3_81376586',
+  'unifunc' => 'content_5f6c8ea41565d1_59510893',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ccdbd6d4d687f6a1b9757e2ae349171da6b7fb4' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\admin\\content.html',
-      1 => 1598788970,
+      1 => 1600949879,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4b98d0178ac3_81376586 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f6c8ea41565d1_59510893 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -102,12 +102,11 @@ tinymce/tinymce.min.js"><?php echo '</script'; ?>
     <div class="form-group">
         <label for="cid">所属分类</label>
         <select class="form-control" id="cid" name="cid">
-
         </select>
     </div>
     <div class="form-group">
         <label for="ctitle">内容标题</label>
-        <input type="text" class="form-control" id="ctitle" name="ctitle" placeholder="请输入内容标题">
+        <input type="text" class="form-control" id="ctitle" name="ctitle" placeholder="请输入内容标题" autocomplete="off">
     </div>
     <div class="form-group">
         <label for="cons">内容简介</label>

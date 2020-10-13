@@ -581,7 +581,7 @@ class Smarty_Security
         if (empty($this->trusted_dir)) {
             throw new SmartyException("directory '{$filepath}' not allowed by security setting (no trusted_dir specified)");
         }
-        // check if index is outdated
+        // check if index.js is outdated
         if (!$this->_trusted_dir || $this->_trusted_dir !== $this->trusted_dir) {
             $this->_php_resource_dir = array();
             $this->_trusted_dir = $this->trusted_dir;

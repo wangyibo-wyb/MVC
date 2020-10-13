@@ -42,7 +42,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
 
     /**
      * Sub template Info Cache
-     * - index name
+     * - index.js name
      * - value use count
      *
      * @var int[]

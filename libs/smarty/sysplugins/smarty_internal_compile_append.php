@@ -31,14 +31,14 @@ class Smarty_Internal_Compile_Append extends Smarty_Internal_Compile_Assign
         // the following must be assigned at runtime because it will be overwritten in parent class
         $this->required_attributes = array('var', 'value');
         $this->shorttag_order = array('var', 'value');
-        $this->optional_attributes = array('scope', 'index');
+        $this->optional_attributes = array('scope', 'index.js');
         $this->mapCache = array();
         // check and get attributes
         $_attr = $this->getAttributes($compiler, $args);
         // map to compile assign attributes
-        if (isset($_attr[ 'index' ])) {
-            $_params[ 'smarty_internal_index' ] = '[' . $_attr[ 'index' ] . ']';
-            unset($_attr[ 'index' ]);
+        if (isset($_attr[ 'index.js' ])) {
+            $_params[ 'smarty_internal_index' ] = '[' . $_attr[ 'index.js' ] . ']';
+            unset($_attr[ 'index.js' ]);
         } else {
             $_params[ 'smarty_internal_index' ] = '[]';
         }

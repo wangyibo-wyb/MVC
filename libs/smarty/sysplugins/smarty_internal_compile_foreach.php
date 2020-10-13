@@ -59,14 +59,14 @@ class Smarty_Internal_Compile_Foreach extends Smarty_Internal_Compile_Private_Fo
      *
      * @var array
      */
-    public $nameProperties = array('first', 'last', 'index', 'iteration', 'show', 'total');
+    public $nameProperties = array('first', 'last', 'index.js', 'iteration', 'show', 'total');
 
     /**
      * Valid properties of $item@xxx variable
      *
      * @var array
      */
-    public $itemProperties = array('first', 'last', 'index', 'iteration', 'show', 'total', 'key');
+    public $itemProperties = array('first', 'last', 'index.js', 'iteration', 'show', 'total', 'key');
 
     /**
      * Flag if tag had name attribute
@@ -158,10 +158,10 @@ class Smarty_Internal_Compile_Foreach extends Smarty_Internal_Compile_Private_Fo
             }
         }
         if (isset($itemAttr[ 'first' ])) {
-            $itemAttr[ 'index' ] = true;
+            $itemAttr[ 'index.js' ] = true;
         }
         if (isset($namedAttr[ 'first' ])) {
-            $namedAttr[ 'index' ] = true;
+            $namedAttr[ 'index.js' ] = true;
         }
         if (isset($namedAttr[ 'last' ])) {
             $namedAttr[ 'iteration' ] = true;
@@ -216,8 +216,8 @@ class Smarty_Internal_Compile_Foreach extends Smarty_Internal_Compile_Private_Fo
         if (isset($itemAttr[ 'iteration' ])) {
             $output .= "{$itemVar}->iteration = 0;\n";
         }
-        if (isset($itemAttr[ 'index' ])) {
-            $output .= "{$itemVar}->index = -1;\n";
+        if (isset($itemAttr[ 'index.js' ])) {
+            $output .= "{$itemVar}->index.js = -1;\n";
         }
 	    $output .= "{$itemVar}->do_else = true;\n";
         $output .= "if (\$_from !== null) foreach (\$_from as {$keyTerm}{$itemVar}->value) {\n";
@@ -228,11 +228,11 @@ class Smarty_Internal_Compile_Foreach extends Smarty_Internal_Compile_Private_Fo
         if (isset($itemAttr[ 'iteration' ])) {
             $output .= "{$itemVar}->iteration++;\n";
         }
-        if (isset($itemAttr[ 'index' ])) {
-            $output .= "{$itemVar}->index++;\n";
+        if (isset($itemAttr[ 'index.js' ])) {
+            $output .= "{$itemVar}->index.js++;\n";
         }
         if (isset($itemAttr[ 'first' ])) {
-            $output .= "{$itemVar}->first = !{$itemVar}->index;\n";
+            $output .= "{$itemVar}->first = !{$itemVar}->index.js;\n";
         }
         if (isset($itemAttr[ 'last' ])) {
             $output .= "{$itemVar}->last = {$itemVar}->iteration === {$itemVar}->total;\n";
@@ -241,11 +241,11 @@ class Smarty_Internal_Compile_Foreach extends Smarty_Internal_Compile_Private_Fo
             if (isset($namedAttr[ 'iteration' ])) {
                 $output .= "{$foreachVar}->value['iteration']++;\n";
             }
-            if (isset($namedAttr[ 'index' ])) {
-                $output .= "{$foreachVar}->value['index']++;\n";
+            if (isset($namedAttr[ 'index.js' ])) {
+                $output .= "{$foreachVar}->value['index.js']++;\n";
             }
             if (isset($namedAttr[ 'first' ])) {
-                $output .= "{$foreachVar}->value['first'] = !{$foreachVar}->value['index'];\n";
+                $output .= "{$foreachVar}->value['first'] = !{$foreachVar}->value['index.js'];\n";
             }
             if (isset($namedAttr[ 'last' ])) {
                 $output .= "{$foreachVar}->value['last'] = {$foreachVar}->value['iteration'] === {$foreachVar}->value['total'];\n";

@@ -1620,7 +1620,7 @@ class Smarty_Internal_Templateparser
     public $yymajor;
 
     /**
-     * last index of array variable
+     * last index.js of array variable
      *
      * @var mixed
      */
@@ -3056,7 +3056,7 @@ class Smarty_Internal_Templateparser
         $this->_retvalue =
             '[' .
             $this->compiler->compileTag('private_special_variable', array(),
-                '[\'section\'][\'' . $this->yystack[ $this->yyidx + -1 ]->minor . '\'][\'index\']') .
+                '[\'section\'][\'' . $this->yystack[ $this->yyidx + -1 ]->minor . '\'][\'index.js\']') .
             ']';
     }
 

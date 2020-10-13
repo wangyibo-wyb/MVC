@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-23 11:49:37
+/* Smarty version 3.1.34-dev-7, created on 2020-09-24 12:09:55
   from 'D:\WampServer\www\2006\MVC\application\template\admin\reg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4257d116fcd3_90968569',
+  'unifunc' => 'content_5f6c8c937aae96_70087983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a25288c844777e527159b9a4fd358727f6e04f5c' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\admin\\reg.html',
-      1 => 1597932716,
+      1 => 1600949247,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4257d116fcd3_90968569 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f6c8c937aae96_70087983 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -49,11 +49,11 @@ reg.js"><?php echo '</script'; ?>
 <body>
 <form class="form-horizontal" action="<?php echo ENTRY_ADD;?>
 /admin/reg/addUser" method="post">
-    <h1>欢迎来到xx后台管理中心</h1>
+    <h1><b>欢迎来到企业门户网后台管理中心</b></h1>
     <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail3" placeholder="请输入用户名" name="uname">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="请输入用户名" name="uname" autocomplete="off">
         </div>
     </div>
     <div class="form-group">

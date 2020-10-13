@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-26 13:01:37
+/* Smarty version 3.1.34-dev-7, created on 2020-09-11 07:21:54
   from 'D:\WampServer\www\2006\MVC\application\template\index\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f465d318c1c85_36463940',
+  'unifunc' => 'content_5f5b2592866516_78882151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '55d68d6af95e363b3828e2698dd941793a2910ff' => 
     array (
       0 => 'D:\\WampServer\\www\\2006\\MVC\\application\\template\\index\\index.html',
-      1 => 1598446895,
+      1 => 1599534969,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f465d318c1c85_36463940 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5b2592866516_78882151 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -45,6 +45,7 @@ index/index.css">
     </div>
     <div class="banner-list">
         <div class="banner-item" style="opacity: 1;">
+            <div class="progress"></div>
             <img src="<?php echo IMG_ADD;?>
 b1.jpg" alt="" style="width: 100%;height: 760px; position: absolute;">
             <div style="position: absolute;background: #000;width: 100%;height: 100%;opacity: .2;"></div>
@@ -70,6 +71,7 @@ border1.png" alt=""
             </div>
         </div>
         <div class="banner-item" style="opacity: 0;">
+            <div class="progress"></div>
             <img src="<?php echo IMG_ADD;?>
 b2.jpg" alt="" style="width: 100%;height: 760px;position: absolute;">
             <div style="position: absolute;background: #000;width: 100%;height: 100%;opacity: .2;"></div>
@@ -95,6 +97,7 @@ b2.jpg" alt="" style="width: 100%;height: 760px;position: absolute;">
             </div>
         </div>
         <div class="banner-item" style="opacity: 0;">
+            <div class="progress"></div>
             <img src="<?php echo IMG_ADD;?>
 b3.jpg" alt="" style="width: 100%;height: 760px;position: absolute;">
             <div style="position: absolute;background: #000;width: 100%;height: 100%;opacity: .2;"></div>
@@ -129,6 +132,7 @@ b3.jpg" alt="" style="width: 100%;height: 760px;position: absolute;">
             </div>
         </div>
         <div class="banner-item" style="opacity: 0;">
+            <div class="progress"></div>
             <img src="<?php echo IMG_ADD;?>
 b4.jpg" alt="" style="width: 100%;height: 760px;position: absolute;">
             <div style="position: absolute;background: #000;width: 100%;height: 100%;opacity: .2;"></div>
@@ -181,6 +185,8 @@ animate.js"><?php echo '</script'; ?>
         var back = document.querySelector(".back");
         var next = document.querySelector(".next");
         var banner = document.querySelector(".banner");
+        var progress = document.querySelector(".progress");
+        progress.style.width = "100%";
         var num = 0;
         function wheel() {
             num++;
